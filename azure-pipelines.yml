@@ -6,15 +6,17 @@
 pool:
   vmImage: 'Ubuntu 16.04'
 
-steps:
+#Copy/Paste below dpsethi
+
+ steps:
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.10'
+    jdkVersionOption: '1.11'
     jdkArchitectureOption: 'x64'
-    publishJUnitResults: true
+    publishJUnitResults: false
     testResultsFiles: '**/TEST-*.xml'
     goals: 'package'
 
