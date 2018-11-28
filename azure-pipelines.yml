@@ -6,9 +6,7 @@
 pool:
   vmImage: 'Ubuntu 16.04'
 
-#Copy/Paste below dpsethi
-
- steps:
+steps:
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
